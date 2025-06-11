@@ -1,6 +1,4 @@
-<p style="text-align: center; margin-bottom: 20px; font-weight: bold;">
-                    Registration is open now. Spots are limited!
-                </p><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +12,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -27,6 +25,24 @@
             padding: 0 20px;
         }
 
+        /* Registration Banner */
+        .registration-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
         /* Header */
         header {
             text-align: center;
@@ -34,6 +50,8 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             margin-bottom: 40px;
+            border-radius: 30px;
+            margin-top: 20px;
         }
 
         .logo {
@@ -61,6 +79,7 @@
             font-size: 1.1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            margin: 10px;
         }
 
         .cta-button:hover {
@@ -243,6 +262,11 @@
     </style>
 </head>
 <body>
+    <!-- Registration Banner -->
+    <div class="registration-banner">
+        🚨 Registration is open now. Spots are limited! 🚨
+    </div>
+
     <div class="container">
         <!-- Header -->
         <header>
@@ -276,34 +300,7 @@
                 </div>
             </div>
 
-            <!-- What You'll Get -->
-            <div class="section">
-                <h2>What You'll Get</h2>
-                <div class="features">
-                    <div class="feature">
-                        <div class="feature-icon">💰</div>
-                        <h3>Cash Prizes</h3>
-                        <p>Real money for winning teams</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🏆</div>
-                        <h3>Recognition</h3>
-                        <p>Trophies and media coverage</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">📚</div>
-                        <h3>College Apps</h3>
-                        <p>Impressive achievement for applications</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🍕</div>
-                        <h3>All Meals</h3>
-                        <p>Papa John's, Chick-fil-A, and more</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Challenge Areas -->
+            <!-- What You Will Do -->
             <div class="section">
                 <h2>What You Will Do</h2>
                 <p style="text-align: center; margin-bottom: 30px;">
@@ -329,6 +326,33 @@
                         <div class="feature-icon">🏙️</div>
                         <h3>Downtown Revitalization</h3>
                         <p>Economic development, business growth, urban renewal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What You'll Get -->
+            <div class="section">
+                <h2>What You'll Get</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">💰</div>
+                        <h3>Cash Prizes</h3>
+                        <p>Real money for winning teams</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📺</div>
+                        <h3>Media Recognition</h3>
+                        <p>TV, newspapers, and online coverage</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Mentorship</h3>
+                        <p>Skill development opportunities with experts</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🍕</div>
+                        <h3>All Meals</h3>
+                        <p>Papa John's, Chick-fil-A, and more</p>
                     </div>
                 </div>
             </div>
@@ -377,7 +401,7 @@
                     <ul>
                         <li>Must be in grades 8-12 (no college students)</li>
                         <li>Teams must have 2-6 members (no solo participants)</li>
-                        <li>All projects must focus on environment, housing, or community challenges</li>
+                        <li>All projects must focus on environment, housing, public safety, or downtown revitalization</li>
                         <li>Can build apps, websites, or any digital solution</li>
                         <li>All skill levels welcome - from beginners to experts</li>
                         <li>Must register through our Discord/Slack community</li>
@@ -386,14 +410,14 @@
             </div>
 
             <!-- Registration -->
-            <div class="section" id="register">
+            <div class="section">
                 <h2>Ready to Join?</h2>
                 <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
                     This isn't just another coding competition; it's your opportunity to build real projects, network with peers, gain community recognition, and win cash prizes while adding an impressive achievement to your college applications.
                 </p>
                 <div style="text-align: center;">
-                    <a href="https://discord.gg/h7gFAk6a" class="cta-button" style="margin: 10px;" target="_blank">Join Discord</a>
-                    <a href="https://lu.ma/egu1qvmt" class="cta-button" style="margin: 10px;" target="_blank">Register on Luma</a>
+                    <a href="https://discord.gg/h7gFAk6a" class="cta-button" target="_blank">Join Discord</a>
+                    <a href="https://lu.ma/egu1qvmt" class="cta-button" target="_blank">Register on Luma</a>
                 </div>
             </div>
         </div>
@@ -401,9 +425,9 @@
         <!-- Footer -->
         <footer>
             <div class="footer-links">
-                <a href="#register">Register</a>
-                <a href="mailto:info@hackthetrack.com">Contact</a>
-                <a href="#">FAQ</a>
+                <a href="https://lu.ma/egu1qvmt" target="_blank">Register</a>
+                <a href="https://www.instagram.com/hack_the_track_ky/" target="_blank">Contact</a>
+                <a href="https://discord.gg/h7gFAk6a" target="_blank">Discord</a>
             </div>
             <p>Powered by KYX | © 2025 Hack the Track</p>
         </footer>
