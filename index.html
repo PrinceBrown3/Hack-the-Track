@@ -12,11 +12,19 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1f2937;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
             min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -25,79 +33,185 @@
             padding: 0 20px;
         }
 
-        /* Registration Banner */
-        .registration-banner {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* Registration Banner */
+        .registration-banner {
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         /* Header */
         header {
             text-align: center;
-            padding: 60px 0;
+            padding: 100px 0;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 40px;
-            border-radius: 30px;
-            margin-top: 20px;
+            backdrop-filter: blur(25px);
+            margin: 40px 0;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .logo {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 4rem;
+            font-weight: 800;
             color: white;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            text-shadow: 
+                0 0 30px rgba(255,255,255,0.3),
+                0 0 60px rgba(236,72,153,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subheader {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .tagline {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            font-weight: 400;
         }
 
         .cta-button {
             display: inline-block;
-            background: #ff6b6b;
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 14px 28px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-            margin: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin: 8px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+            box-shadow: 0 12px 35px rgba(236, 72, 153, 0.4);
+        }
+
+        .cta-button.primary {
+            background: white;
+            color: #ec4899;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-button.primary:hover {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
         }
 
         /* Main Content */
         .content {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 60px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .section:last-child {
@@ -105,15 +219,18 @@
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            color: #1f2937;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
             text-align: center;
+            letter-spacing: -0.02em;
         }
 
         h3 {
-            color: #764ba2;
+            color: #374151;
             font-size: 1.3rem;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
@@ -122,69 +239,125 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .event-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            background-size: 200% 200%;
             color: white;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: cardGradient 8s ease-in-out infinite;
+        }
+
+        @keyframes cardGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .event-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .event-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
         }
 
         .event-card h3 {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
         .event-card p {
-            font-size: 1.1rem;
-            line-height: 1.5;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.95;
         }
 
         /* Features */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
 
         .feature {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            border-left: 4px solid #667eea;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         .feature-icon {
             font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #6b7280;
+            font-size: 0.95rem;
         }
 
         /* Schedule */
         .schedule-day {
-            background: #f8f9fa;
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #ff6b6b;
+            background: #f9fafb;
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 4px solid #ec4899;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .schedule-day h4 {
-            color: #ff6b6b;
+            color: #ec4899;
             font-size: 1.3rem;
-            margin-bottom: 15px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .schedule-item {
-            margin: 10px 0;
-            padding: 8px 0;
-            border-bottom: 1px dotted #ddd;
+            margin: 12px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            display: flex;
+            align-items: center;
         }
 
         .schedule-item:last-child {
@@ -192,16 +365,17 @@
         }
 
         .time {
-            font-weight: bold;
-            color: #667eea;
+            font-weight: 600;
+            color: #6366f1;
+            min-width: 140px;
         }
 
         /* Requirements */
         .requirements {
-            background: #e8f4fd;
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid #667eea;
+            background: #f3f4f6;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #d1d5db;
         }
 
         .requirements ul {
@@ -210,53 +384,120 @@
         }
 
         .requirements li {
-            margin: 10px 0;
-            padding-left: 25px;
+            margin: 12px 0;
+            padding-left: 30px;
             position: relative;
+            font-weight: 500;
+            color: #374151;
         }
 
         .requirements li:before {
             content: "✓";
-            color: #28a745;
+            color: #059669;
             font-weight: bold;
+            font-size: 1.1rem;
             position: absolute;
             left: 0;
+            top: 0;
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .team-member {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-member h4 {
+            color: #1f2937;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .team-member .role {
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .team-member .school {
+            color: #9ca3af;
+            font-size: 0.9rem;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             color: rgba(255, 255, 255, 0.8);
         }
 
         .footer-links {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .footer-links a {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #ff6b6b;
+            color: white;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
             .logo {
                 font-size: 2.5rem;
             }
 
-            .content {
-                padding: 25px;
+            .subheader {
+                font-size: 1.1rem;
             }
 
-            .event-grid {
+            .content {
+                padding: 30px;
+            }
+
+            .event-grid, .features, .about-grid {
                 grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .schedule-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .time {
+                min-width: auto;
+                margin-bottom: 5px;
             }
         }
     </style>
@@ -264,15 +505,28 @@
 <body>
     <!-- Registration Banner -->
     <div class="registration-banner">
-        🚨 Registration is open now. Spots are limited! 🚨
+        Registration is open now. Spots are limited!
     </div>
 
     <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="nav-logo">Hack the Track</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#requirements">Requirements</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
         <!-- Header -->
         <header>
             <div class="logo">🏃‍♂️💻 Hack the Track</div>
+            <div class="subheader">First High School Hackathon in Kentuckiana</div>
             <div class="tagline">Build Solutions. Change Communities. Win Prizes.</div>
-            <a href="https://lu.ma/egu1qvmt" class="cta-button" target="_blank">Register Now</a>
+            <a href="https://lu.ma/egu1qvmt" class="cta-button primary" target="_blank">Register Now</a>
+            <a href="https://discord.gg/h7gFAk6a" class="cta-button" target="_blank">Join Discord</a>
         </header>
 
         <!-- Main Content -->
@@ -280,7 +534,7 @@
             <!-- Hero Section -->
             <div class="section">
                 <h2>Code for Your Community</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px; color: #6b7280;">
                     Join us for an exciting 24-hour hackathon designed exclusively for students (grades 8-12). Whether you're a coding newbie or a programming prodigy, this is your chance to build something amazing, learn new skills, and compete for incredible prizes!
                 </p>
 
@@ -303,13 +557,13 @@
             <!-- What You Will Do -->
             <div class="section">
                 <h2>What You Will Do</h2>
-                <p style="text-align: center; margin-bottom: 30px;">
-                    You will have the opportunity to have an amazing time creating an app or website that tackles a community challenge in these key areas:
+                <p style="text-align: center; margin-bottom: 40px; color: #6b7280; font-size: 1rem;">
+                    Create an app or website that tackles a community challenge in these key areas:
                 </p>
                 <div class="features">
                     <div class="feature">
                         <div class="feature-icon">🌱</div>
-                        <h3>Environmental & Infrastructure Solutions</h3>
+                        <h3>Environmental & Infrastructure</h3>
                         <p>Sustainability, climate action, green technology</p>
                     </div>
                     <div class="feature">
@@ -326,6 +580,11 @@
                         <div class="feature-icon">🏙️</div>
                         <h3>Downtown Revitalization</h3>
                         <p>Economic development, business growth, urban renewal</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📚</div>
+                        <h3>Education</h3>
+                        <p>Learning accessibility, educational technology, student resources</p>
                     </div>
                 </div>
             </div>
@@ -351,57 +610,92 @@
                     </div>
                     <div class="feature">
                         <div class="feature-icon">🍕</div>
-                        <h3>All Meals</h3>
-                        <p>Papa John's, Chick-fil-A, and more</p>
+                        <h3>All Meals Provided</h3>
+                        <p>Breakfast, lunch, dinner, and snacks throughout</p>
                     </div>
                 </div>
             </div>
 
             <!-- Schedule -->
-            <div class="section">
+            <div class="section" id="schedule">
                 <h2>Event Schedule</h2>
                 
                 <div class="schedule-day">
                     <h4>Friday, September 5th</h4>
                     <div class="schedule-item">
-                        <span class="time">5:00-7:00 PM</span> - Opening Ceremony & Team Formation
+                        <span class="time">5:00-7:00 PM</span>
+                        <span>Opening Ceremony & Team Formation</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">7:00-8:00 PM</span> - Dinner (Pizza Party!)
+                        <span class="time">7:00-8:00 PM</span>
+                        <span>Dinner (Pizza Party!)</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">7:00-11:00 PM</span> - Hacking Begins
+                        <span class="time">7:00-11:00 PM</span>
+                        <span>Hacking Begins</span>
                     </div>
                 </div>
 
                 <div class="schedule-day">
                     <h4>Saturday, September 6th</h4>
                     <div class="schedule-item">
-                        <span class="time">7:00-8:00 AM</span> - Breakfast (Chick-fil-A)
+                        <span class="time">7:00-8:00 AM</span>
+                        <span>Breakfast</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">8:00 AM-5:00 PM</span> - Continued Development
+                        <span class="time">8:00 AM-5:00 PM</span>
+                        <span>Continued Development</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">12:00-1:00 PM</span> - Lunch Break
+                        <span class="time">12:00-1:00 PM</span>
+                        <span>Lunch Break</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">5:00-6:00 PM</span> - Project Judging
+                        <span class="time">5:00-6:00 PM</span>
+                        <span>Project Judging</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">7:00-9:00 PM</span> - Award Party & Celebration!
+                        <span class="time">7:00-9:00 PM</span>
+                        <span>Award Party & Celebration!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Us -->
+            <div class="section" id="about">
+                <h2>About Us</h2>
+                <div class="about-grid">
+                    <div class="team-member">
+                        <h4>Annika Chadha</h4>
+                        <div class="role">Founder & President</div>
+                        <div class="school">Junior at duPont Manual High School</div>
+                    </div>
+                    <div class="team-member">
+                        <h4>Ajay Sutaria</h4>
+                        <div class="role">Vice President</div>
+                        <div class="school">Junior at duPont Manual High School</div>
+                    </div>
+                    <div class="team-member">
+                        <h4>Maylin Kidwell</h4>
+                        <div class="role">Secretary</div>
+                        <div class="school">Sophomore at duPont Manual High School</div>
+                    </div>
+                    <div class="team-member">
+                        <h4>Dan Ross-Li</h4>
+                        <div class="role">Partner</div>
+                        <div class="school">KYCombinator 40below40</div>
                     </div>
                 </div>
             </div>
 
             <!-- Requirements -->
-            <div class="section">
+            <div class="section" id="requirements">
                 <h2>Requirements</h2>
                 <div class="requirements">
                     <ul>
                         <li>Must be in grades 8-12 (no college students)</li>
                         <li>Teams must have 2-6 members (no solo participants)</li>
-                        <li>All projects must focus on environment, housing, public safety, or downtown revitalization</li>
+                        <li>All projects must focus on environment, housing, public safety, downtown revitalization, or education</li>
                         <li>Can build apps, websites, or any digital solution</li>
                         <li>All skill levels welcome - from beginners to experts</li>
                         <li>Must register through our Discord/Slack community</li>
@@ -412,18 +706,18 @@
             <!-- Registration -->
             <div class="section">
                 <h2>Ready to Join?</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px; color: #6b7280;">
                     This isn't just another coding competition; it's your opportunity to build real projects, network with peers, gain community recognition, and win cash prizes while adding an impressive achievement to your college applications.
                 </p>
                 <div style="text-align: center;">
+                    <a href="https://lu.ma/egu1qvmt" class="cta-button primary" target="_blank">Register on Luma</a>
                     <a href="https://discord.gg/h7gFAk6a" class="cta-button" target="_blank">Join Discord</a>
-                    <a href="https://lu.ma/egu1qvmt" class="cta-button" target="_blank">Register on Luma</a>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer id="contact">
             <div class="footer-links">
                 <a href="https://lu.ma/egu1qvmt" target="_blank">Register</a>
                 <a href="https://www.instagram.com/hack_the_track_ky/" target="_blank">Contact</a>
