@@ -20,7 +20,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1199px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -405,6 +405,26 @@
                 grid-template-columns: 1fr;
             }
 
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature {
+                padding: 25px 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Remove grid column override on mobile */
+            .feature[style*="grid-column"],
+            .team-member[style*="grid-column"] {
+                grid-column: unset !important;
+            }
+
             h2 {
                 font-size: 2rem;
             }
@@ -421,6 +441,14 @@
 
             .header-logo {
                 width: 200px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .content {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -504,7 +532,7 @@
                         <h3>Downtown Revitalization</h3>
                         <p>Economic development, business growth, urban renewal</p>
                     </div>
-                    <div class="feature" style="grid-column: 2 / 3;">
+                    <div class="feature">
                         <div class="feature-icon">📚</div>
                         <h3>Education</h3>
                         <p>Learning accessibility, educational technology, student resources</p>
@@ -531,7 +559,7 @@
                         <h3>Mentorship</h3>
                         <p>Skill development opportunities with experts</p>
                     </div>
-                    <div class="feature" style="grid-column: 2 / 3;">
+                    <div class="feature">
                         <div class="feature-icon">🍕</div>
                         <h3>All Meals Provided</h3>
                         <p>Breakfast, lunch, dinner, and snacks throughout</p>
@@ -603,7 +631,7 @@
                         <div class="role">Secretary</div>
                         <div class="school">Sophomore at duPont Manual High School</div>
                     </div>
-                    <div class="team-member" style="grid-column: 2 / 3;">
+                    <div class="team-member">
                         <h4>Dan Ross-Li</h4>
                         <div class="role">Partner</div>
                         <div class="school">KYCombinator 40below40</div>
