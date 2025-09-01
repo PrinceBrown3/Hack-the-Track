@@ -1058,6 +1058,33 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .features-row-1 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .features-row-2 {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            
+            .venue-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .about-row-1 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .about-row-2 {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1076,7 +1103,13 @@
                 max-width: 400px;
             }
             
-
+            /* What You'll Do Section - Make it single column on mobile */
+            .features-row-1,
+            .features-row-2 {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 20px;
+            }
             
             .about-row-1,
             .about-row-2 {
@@ -1111,8 +1144,7 @@
                 grid-column: span 1;
             }
             
-
-            
+            /* Our Venue Section - Make it single column on mobile */
             .venue-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -1161,6 +1193,50 @@
             
             .content {
                 padding: 40px 20px;
+            }
+            
+            /* Additional mobile optimizations */
+            .feature {
+                margin-bottom: 15px;
+            }
+            
+            .venue-image {
+                min-height: 250px;
+            }
+            
+            .venue-caption {
+                font-size: 0.85rem;
+                padding: 12px;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .features-row-1,
+            .features-row-2 {
+                max-width: 100%;
+                gap: 15px;
+            }
+            
+            .venue-grid {
+                max-width: 100%;
+                gap: 15px;
+            }
+            
+            .feature {
+                padding: 20px 15px;
+            }
+            
+            .venue-image {
+                min-height: 200px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .content {
+                padding: 30px 15px;
             }
         }
     </style>
