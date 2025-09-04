@@ -826,10 +826,11 @@
 
         .awards-row-2 {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             width: 100%;
-            max-width: 400px;
+            max-width: 1200px;
+            margin-top: 30px;
         }
 
         .award-card {
@@ -880,7 +881,6 @@
         /* Special Awards */
         .special-award {
             background: linear-gradient(135deg, #1e40af, #1e3a8a);
-            grid-column: span 2;
         }
 
         /* Venue Gallery */
@@ -1083,6 +1083,18 @@
                 grid-template-columns: 1fr;
                 max-width: 500px;
             }
+            
+            .awards-row-2 {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .awards-row-2 {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1137,11 +1149,9 @@
             }
             
             .awards-row-2 {
+                grid-template-columns: 1fr;
                 max-width: 400px;
-            }
-            
-            .special-award {
-                grid-column: span 1;
+                gap: 20px;
             }
             
             /* Our Venue Section - Make it single column on mobile */
@@ -1237,6 +1247,15 @@
             
             .content {
                 padding: 30px 15px;
+            }
+            
+            .awards-row-2 {
+                max-width: 100%;
+                gap: 15px;
+            }
+            
+            .award-card {
+                padding: 25px 15px;
             }
         }
     </style>
@@ -1353,24 +1372,31 @@
                         <div class="award-card animate-on-scroll-scale">
                             <h3>1st Place</h3>
                             <div class="prize-amount">$500</div>
-                            <p>First Place Winners</p>
                         </div>
                         <div class="award-card animate-on-scroll-scale">
                             <h3>2nd Place</h3>
                             <div class="prize-amount">$300</div>
-                            <p>Second Place Winners</p>
                         </div>
                         <div class="award-card animate-on-scroll-scale">
                             <h3>3rd Place</h3>
                             <div class="prize-amount">$200</div>
-                            <p>Third Place Winners</p>
                         </div>
                     </div>
                     <div class="awards-row-2">
                         <div class="award-card special-award animate-on-scroll-scale">
-                            <h3>Special Awards</h3>
-                            <div class="prize-amount">🏆</div>
-                            <p>Additional recognition and prizes for outstanding achievements such as tickets to a Bats game or a free 30 minute session at Five Iron Golf!</p>
+                            <h3>🏌️ Five Iron Golf Experience</h3>
+                            <div class="prize-amount">30 MIN</div>
+                            <p>Free 30-minute golf session at Five Iron Golf for the most innovative solution!</p>
+                        </div>
+                        <div class="award-card special-award animate-on-scroll-scale">
+                            <h3>⚾ Louisville Bats Game</h3>
+                            <div class="prize-amount">2 TICKETS</div>
+                            <p>Free tickets for you and a friend to enjoy a Louisville Bats baseball game!</p>
+                        </div>
+                        <div class="award-card special-award animate-on-scroll-scale">
+                            <h3>🎯 GSE Excellence Awards</h3>
+                            <div class="prize-amount">MORE PRIZES</div>
+                            <p>Additional exciting awards and recognition sponsored by GSE for outstanding achievements!</p>
                         </div>
                     </div>
                 </div>
@@ -1636,6 +1662,12 @@
                     <div class="sponsor-logo">
                         <img src="fiveIronGolfLogo.png" alt="Five Iron Golf">
                     </div>
+                    <div class="sponsor-logo">
+                        <img src="gseLogo.png" alt="GSE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="papaJohnsLogo.png" alt="Papa John's">
+                    </div>
                     <!-- Duplicate logos for seamless loop -->
                     <div class="sponsor-logo">
                         <img src="storyLogo.png" alt="Story">
@@ -1658,10 +1690,16 @@
                     <div class="sponsor-logo">
                         <img src="fiveIronGolfLogo.png" alt="Five Iron Golf">
                     </div>
+                    <div class="sponsor-logo">
+                        <img src="gseLogo.png" alt="GSE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="papaJohnsLogo.png" alt="Papa John's">
+                    </div>
                 </div>
             </div>
             <p class="animate-on-scroll" style="text-align: center; margin-top: 30px; color: #3D5A80;">
-                Interested in sponsoring? <a href="mailto:contact@hackthetrack.org" style="color: #EE6C4D; text-decoration: none; font-weight: 600;">Contact us</a>
+                Interested in sponsoring? <a href="mailto:sutariamajay@gmail.com,annikachadha8@gmail.com?subject=Sponsorship Inquiry - Hack the Track" style="color: #EE6C4D; text-decoration: none; font-weight: 600;">Contact us</a>
             </p>
         </div>
     </div>
