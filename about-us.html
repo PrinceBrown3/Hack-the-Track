@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Hack the Track">
-    <title>Hack the Track 2026 - Coming Soon | Kentucky's Premier High School Hackathon</title>
+    <title>About Us - Meet the Team | Hack the Track</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -331,91 +331,12 @@
             width: 100%;
         }
 
-        .register-btn {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-
-        .register-btn:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 40px 0 30px;
-            position: relative;
-            z-index: 10;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-top: 80px;
-        }
-
-        .hero-logo {
-            width: 280px;
-            height: 280px;
-            max-width: 350px;
-            max-height: 350px;
-            margin: 0 auto 20px;
-            display: block;
-            animation: logoFloat 4s ease-in-out infinite;
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
-            object-fit: contain;
-        }
-
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero-title {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-            animation: titleGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes titleGlow {
-            0%, 100% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.3); }
-            50% { text-shadow: 0 0 50px rgba(59, 130, 246, 0.6); }
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
+        .nav-links a.active {
             color: #3b82f6;
-            margin-bottom: 8px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            animation: subtitlePulse 2s ease-in-out infinite;
         }
 
-        @keyframes subtitlePulse {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-
-        .hero-date {
-            font-size: 1rem;
-            color: #94a3b8;
-            margin-bottom: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
+        .nav-links a.active::after {
+            width: 100%;
         }
 
         /* Fixed Top Banner */
@@ -437,7 +358,6 @@
         .excitement-banner.hidden {
             transform: translateY(-100%);
         }
-
 
         .excitement-banner::after {
             content: '';
@@ -466,79 +386,70 @@
             letter-spacing: 0.5px;
         }
 
-        .hero-coming-soon {
+        /* Header */
+        header {
             text-align: center;
-            margin-top: 15px;
-        }
-
-        .hero-coming-soon p {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #3b82f6;
-            margin: 0 0 5px 0;
-        }
-
-        .hero-coming-soon p:last-child {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            margin: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            padding: 40px 0 30px;
             position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
-        }
-
-        .cta-button.secondary {
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
-            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
-        }
-
-        .cta-button.secondary:hover {
-            background: linear-gradient(135deg, #b91c1c, #991b1b);
-            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
-        }
-
-        .cta-buttons {
+            z-index: 10;
+            min-height: 60vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        }
+
+        .header-logo {
+            width: 200px;
+            height: 200px;
+            max-width: 250px;
+            max-height: 250px;
+            margin: 0 auto 20px;
+            display: block;
+            animation: logoFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+            object-fit: contain;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.3); }
+            50% { text-shadow: 0 0 50px rgba(59, 130, 246, 0.6); }
+        }
+
+        .subheader {
+            font-size: 1.2rem;
+            color: #3b82f6;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            animation: subtitlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes subtitlePulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         /* Scroll animation classes */
@@ -556,38 +467,6 @@
         .animate-on-scroll.animated-out {
             opacity: 0;
             transform: translateY(-20px);
-        }
-
-        .animate-on-scroll-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .animate-on-scroll-left.animated {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .animate-on-scroll-left.animated-out {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-
-        .animate-on-scroll-right {
-            opacity: 0;
-            transform: translateX(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .animate-on-scroll-right.animated {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .animate-on-scroll-right.animated-out {
-            opacity: 0;
-            transform: translateX(20px);
         }
 
         .animate-on-scroll-scale {
@@ -616,15 +495,15 @@
         /* Reset delays when not animated */
         .animate-on-scroll-scale:not(.animated) { transition-delay: 0s; }
 
-        /* Mission Section */
-        .mission {
+        /* About Section */
+        .about {
             padding: 100px 0;
             text-align: center;
             position: relative;
             z-index: 10;
         }
 
-        .mission h2 {
+        .about h2 {
             font-size: 3.5rem;
             font-weight: 900;
             color: #ffffff;
@@ -640,7 +519,7 @@
             padding-bottom: 15px;
         }
 
-        .mission h2::after {
+        .about h2::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -652,37 +531,76 @@
             border-radius: 2px;
         }
 
-        .mission-content {
-            max-width: 800px;
+        .about-content {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .mission-statement {
-            font-size: 1.4rem;
-            color: #e2e8f0;
+        .about-text {
             margin-bottom: 70px;
+        }
+
+        .about-statement {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            margin-bottom: 30px;
             line-height: 1.8;
             font-weight: 500;
-            max-width: 700px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
-        .mission-values {
+        /* Meet the Team Section */
+        .team {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .team h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 50px;
+            letter-spacing: -0.03em;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .team h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 2px;
+        }
+
+        .team-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-            max-width: 1000px;
-            margin: 50px auto 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 50px auto;
+            max-width: 1200px;
             justify-items: center;
         }
 
-        .value-card {
+        .team-card {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
-            padding: 40px 35px;
+            padding: 40px 30px;
             border-radius: 24px;
             text-align: center;
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -695,10 +613,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 280px;
+            min-height: 400px;
+            width: 100%;
+            max-width: 300px;
         }
 
-        .value-card::before {
+        .team-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -709,7 +629,7 @@
             border-radius: 24px 24px 0 0;
         }
 
-        .value-card::after {
+        .team-card::after {
             content: '';
             position: absolute;
             top: 0;
@@ -721,22 +641,41 @@
             transition: opacity 0.3s ease;
         }
 
-        .value-card:hover {
+        .team-card:hover {
             transform: translateY(-12px) scale(1.02);
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
             border-color: #3b82f6;
             box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
         }
 
-        .value-card:hover::after {
+        .team-card:hover::after {
             opacity: 1;
         }
 
-        .value-card h3 {
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 4px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .team-card:hover .team-photo {
+            border-color: #3b82f6;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .team-name {
             color: #ffffff;
             font-size: 1.5rem;
             font-weight: 800;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
             letter-spacing: -0.02em;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -744,169 +683,25 @@
             text-align: center;
         }
 
-        .value-card p {
-            color: #e2e8f0;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin: 0;
+        .team-role {
+            color: #3b82f6;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
             position: relative;
             z-index: 2;
             text-align: center;
         }
 
-
-        /* Countdown Section */
-        .countdown {
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .countdown h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 50px;
-            letter-spacing: -0.02em;
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-            text-align: center;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .countdown h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            border-radius: 2px;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 50px 0;
-            flex-wrap: wrap;
-        }
-
-        .time-unit {
-            background: rgba(15, 23, 42, 0.8);
-            color: white;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            min-width: 140px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .time-unit::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-        }
-
-        .time-unit:hover {
-            transform: translateY(-5px);
-            background: rgba(15, 23, 42, 0.9);
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
-        }
-
-        .time-number {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            color: #3b82f6;
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-
-        .time-label {
-            font-size: 1rem;
-            font-weight: 600;
+        .team-school {
             color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Sponsors Section */
-        .sponsors {
-            padding: 80px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
             position: relative;
-            z-index: 10;
-        }
-
-        .sponsors-container {
-            overflow: hidden;
-            position: relative;
-            background: rgba(15, 23, 42, 0.3);
-            border-radius: 20px;
-            padding: 40px 0;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .sponsors-track {
-            display: flex;
-            animation: scroll 25s linear infinite;
-            width: max-content;
-        }
-
-        .sponsors-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .sponsor-logo {
-            padding: 30px 50px;
+            z-index: 2;
             text-align: center;
-            min-width: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .sponsor-logo img {
-            max-width: 100%;
-            max-height: 80px;
-            object-fit: contain;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
-
-        .sponsor-logo:hover img {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        /* Make only Five Iron Golf logo white */
-        .sponsor-logo:has(img[alt="Five Iron Golf"]) img {
-            filter: brightness(0) invert(1);
-        }
-
-        .sponsor-logo:hover {
-            transform: translateY(-5px);
         }
 
         /* Footer */
@@ -946,16 +741,16 @@
                 display: none;
             }
             
-            .hero-logo {
-                width: 220px;
-                height: 220px;
+            .header-logo {
+                width: 150px;
+                height: 150px;
             }
             
-            .hero-title {
-                font-size: 3rem;
+            .logo {
+                font-size: 2.5rem;
             }
             
-            .hero-subtitle {
+            .subheader {
                 font-size: 1rem;
             }
             
@@ -967,72 +762,44 @@
                 margin-top: 50px;
             }
             
-            .hero-coming-soon p:first-child {
-                font-size: 0.9rem;
-            }
-            
-            .hero-coming-soon p:last-child {
-                font-size: 1rem;
-            }
-            
-            .cta-buttons {
-                gap: 10px;
-            }
-            
-            .cta-button {
-                padding: 12px 24px;
-                font-size: 0.8rem;
-            }
-            
-            .mission h2 {
+            .about h2, .team h2 {
                 font-size: 2rem;
             }
             
-            .mission-statement {
+            .about-statement {
                 font-size: 1.1rem;
             }
             
-            .mission-values {
+            .team-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
                 justify-items: center;
             }
             
-            
-            .countdown-timer {
-                gap: 20px;
-                justify-content: center;
-                align-items: center;
+            .team-card {
+                min-height: 350px;
+                max-width: 280px;
             }
             
-            .time-unit {
-                min-width: 100px;
-                padding: 30px 20px;
-            }
-
-            .time-number {
-                font-size: 2.5rem;
+            .team-photo {
+                width: 120px;
+                height: 120px;
             }
             
             .container {
                 padding: 0 20px;
             }
-            
-            .sponsor-logo {
-                min-width: 200px;
-                padding: 20px 30px;
-            }
         }
         
         /* iPhone and small mobile devices */
         @media (max-width: 480px) {
-            .hero-logo {
-                width: 180px;
-                height: 180px;
+            .header-logo {
+                width: 120px;
+                height: 120px;
             }
             
-            .hero-title {
-                font-size: 2.5rem;
+            .logo {
+                font-size: 2rem;
             }
 
             /* Touch-friendly button sizing */
@@ -1043,52 +810,61 @@
             }
 
             /* Ensure text is readable on small screens */
-            .mission-statement {
+            .about-statement {
                 font-size: 1rem;
             }
 
             .banner-text {
                 font-size: 0.8rem;
             }
+            
+            .team-photo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .team-card {
+                padding: 30px 20px;
+                min-height: 320px;
+            }
         }
 
         /* iPhone landscape and tablet portrait */
         @media (max-width: 768px) and (orientation: landscape) {
-            .hero {
-                min-height: 70vh;
+            .header {
+                min-height: 50vh;
                 padding-top: 60px;
             }
 
-            .hero-logo {
-                width: 200px;
-                height: 200px;
+            .header-logo {
+                width: 150px;
+                height: 150px;
             }
         }
-
     </style>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Hack the Track 2026 - Coming Soon! Kentucky's premier high school hackathon. Build solutions, change communities, and compete for amazing prizes.">
-    <meta name="keywords" content="hackathon 2026, high school, kentucky, louisville, programming, coding, students, technology, innovation, coming soon">
+    <meta name="description" content="Meet the team behind Hack the Track - Kentucky's premier high school hackathon. Learn about our founders and organizers.">
+    <meta name="keywords" content="hackathon team, kentucky, high school, programming, coding, students, technology, innovation, founders, organizers">
     <meta name="author" content="Hack the Track">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Hack the Track 2026 - Coming Soon">
-    <meta property="og:description" content="Kentucky's premier high school hackathon is coming back in 2026! Build solutions, change communities, and compete for amazing prizes.">
+    <meta property="og:title" content="About Us - Meet the Team | Hack the Track">
+    <meta property="og:description" content="Meet the passionate team behind Kentucky's premier high school hackathon. Learn about our founders and organizers.">
     <meta property="og:image" content="https://hackthetrack.org/assets/images/logos/hack-the-track-logo-rounded.png">
-    <meta property="og:url" content="https://hackthetrack.org">
+    <meta property="og:url" content="https://hackthetrack.org/about-us.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hack the Track">
     
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hack the Track 2026 - Coming Soon">
-    <meta name="twitter:description" content="Kentucky's premier high school hackathon is coming back in 2026! Build solutions, change communities, and compete for amazing prizes.">
+    <meta name="twitter:title" content="About Us - Meet the Team | Hack the Track">
+    <meta name="twitter:description" content="Meet the passionate team behind Kentucky's premier high school hackathon. Learn about our founders and organizers.">
     <meta name="twitter:image" content="https://hackthetrack.org/assets/images/logos/hack-the-track-logo-rounded.png">
     <meta name="twitter:site" content="@hackthetrack_ky">
     
     <!-- Additional SEO -->
-    <link rel="canonical" href="https://hackthetrack.org">
+    <link rel="canonical" href="https://hackthetrack.org/about-us.html">
     <meta name="theme-color" content="#3b82f6">
 </head>
 <body>
@@ -1125,185 +901,102 @@
     <div class="container">
         <!-- Navigation -->
         <nav>
-            <a href="#" class="nav-logo">HACK THE TRACK</a>
+            <a href="index.html" class="nav-logo">HACK THE TRACK</a>
             <div class="nav-links">
                 <a href="index.html">2026 Event - Coming Soon</a>
-                <a href="about-us.html">About Us</a>
+                <a href="about-us.html" class="active">About Us</a>
                 <a href="2025-event.html">2025 Event</a>
             </div>
         </nav>
 
-            <!-- Fixed Top Banner -->
+        <!-- Fixed Top Banner -->
         <div class="excitement-banner">
             <div class="banner-content">
                 <span class="banner-text">Year 2 Coming Soon - Can't Wait to See You There for Hack the Track 2.0</span>
             </div>
         </div>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <img src="assets/images/logos/hack-the-track-logo-rounded.png" alt="Hack the Track Logo" class="hero-logo">
-            <h1 class="hero-title">HACK THE TRACK</h1>
-            <div class="hero-subtitle">Kentucky's Premier High School Hackathon</div>
-            <div class="hero-coming-soon">
-                <p>Coming Soon:</p>
-                <p>September 2026</p>
-            </div>
-        </section>
+        <!-- Header -->
+        <header>
+            <img src="assets/images/logos/hack-the-track-logo-rounded.png" alt="Hack the Track Logo" class="header-logo">
+            <div class="logo">ABOUT US</div>
+            <div class="subheader">Meet the Team</div>
+            <div class="tagline">The passionate students behind Kentucky's premier hackathon</div>
+        </header>
 
-        <!-- Mission Section -->
-        <section class="mission animate-on-scroll" id="mission">
-            <h2>Our Mission</h2>
-            <div class="mission-content">
-                <p class="mission-statement">
-                    Empowering Kentucky's next generation of tech leaders through hands-on innovation, real-world problem solving, and transformative learning experiences that shape tomorrow's digital workforce.
-                </p>
-                
-                <div class="mission-values">
-                    <div class="value-card animate-on-scroll-scale">
-                        <h3>Innovation</h3>
-                        <p>Championing breakthrough solutions that tackle real-world challenges and drive meaningful community impact.</p>
-                        </div>
-                    <div class="value-card animate-on-scroll-scale">
-                        <h3>Collaboration</h3>
-                        <p>Connecting students with industry leaders and peers to build lasting networks that accelerate career growth.</p>
-                        </div>
-                    <div class="value-card animate-on-scroll-scale">
-                        <h3>Growth</h3>
-                        <p>Creating transformative learning experiences that develop both technical expertise and leadership skills.</p>
-                        </div>
-                    </div>
-                        </div>
-        </section>
-
-        <!-- Countdown Section -->
-        <section class="countdown animate-on-scroll" id="countdown">
-            <h2>Coming Soon in 2026</h2>
-            <div class="countdown-timer">
-                <div class="time-unit animate-on-scroll-scale">
-                    <div class="time-number" id="months">--</div>
-                    <div class="time-label">Months</div>
-                            </div>
-                <div class="time-unit animate-on-scroll-scale">
-                    <div class="time-number" id="days">--</div>
-                    <div class="time-label">Days</div>
-                        </div>
-                <div class="time-unit animate-on-scroll-scale">
-                    <div class="time-number" id="hours">--</div>
-                    <div class="time-label">Hours</div>
-                                </div>
-                <div class="time-unit animate-on-scroll-scale">
-                    <div class="time-number" id="minutes">--</div>
-                    <div class="time-label">Minutes</div>
-                            </div>
-                                </div>
-            <p style="color: #cbd5e1; font-size: 1.2rem; margin-top: 30px;">
-                Get ready for an even bigger and better Hack the Track experience!
-            </p>
-        </section>
-
-        <!-- Sponsors Section -->
-        <div class="sponsors animate-on-scroll" id="sponsors">
-            <div class="sponsors-container animate-on-scroll-scale">
-                <div class="sponsors-track">
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/story-logo.png" alt="Story">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/blue-north-logo.png" alt="Blue North">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/spark-haus-logo.png" alt="SparkHaus">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/humana-logo.png" alt="Humana">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/wild-logo.png" alt="Wild">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/louisville-bats-logo.png" alt="Louisville Bats">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/five-iron-golf-logo.png" alt="Five Iron Golf">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/gse-logo.png" alt="GSE">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/papa-johns-logo.png" alt="Papa John's">
-                    </div>
-                    <!-- Duplicate logos for seamless loop -->
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/story-logo.png" alt="Story">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/blue-north-logo.png" alt="Blue North">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/spark-haus-logo.png" alt="SparkHaus">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/humana-logo.png" alt="Humana">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/wild-logo.png" alt="Wild">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/louisville-bats-logo.png" alt="Louisville Bats">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/five-iron-golf-logo.png" alt="Five Iron Golf">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/gse-logo.png" alt="GSE">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="assets/images/sponsors/papa-johns-logo.png" alt="Papa John's">
-                    </div>
+        <!-- About Section -->
+        <section class="about animate-on-scroll" id="about">
+            <h2>Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-statement">
+                        Hack the Track was founded by a group of passionate high school students who believe in the power of technology to transform communities. 
+                        We saw a gap in Kentucky's educational landscape and decided to create the state's first high school hackathon.
+                    </p>
+                    <p class="about-statement">
+                        Our mission is to provide students with hands-on coding experiences, mentorship opportunities, and a supportive community where 
+                        innovation thrives. We believe that every student deserves access to quality technology education and real-world problem-solving experiences.
+                    </p>
+                    <p class="about-statement">
+                        Through Hack the Track, we're building bridges between students, industry professionals, and educational institutions, 
+                        creating lasting connections that will shape Kentucky's tech future.
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="team animate-on-scroll" id="team">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll-scale">
+                    <img src="assets/images/aboutUs/AnnikaChadha.jpeg" alt="Annika Chadha" class="team-photo">
+                    <h3 class="team-name">Annika Chadha</h3>
+                    <p class="team-role">Founder & President</p>
+                    <p class="team-school">Junior at duPont Manual High School</p>
+                </div>
+                <div class="team-card animate-on-scroll-scale">
+                    <img src="assets/images/aboutUs/AjaySutaria.jpeg" alt="Ajay Sutaria" class="team-photo">
+                    <h3 class="team-name">Ajay Sutaria</h3>
+                    <p class="team-role">Vice President</p>
+                    <p class="team-school">Junior at duPont Manual High School</p>
+                </div>
+                <div class="team-card animate-on-scroll-scale">
+                    <img src="assets/images/aboutUs/MaylinKidwell.png" alt="Maylin Kidwell" class="team-photo">
+                    <h3 class="team-name">Maylin Kidwell</h3>
+                    <p class="team-role">Secretary</p>
+                    <p class="team-school">Sophomore at duPont Manual High School</p>
+                </div>
+                <div class="team-card animate-on-scroll-scale">
+                    <img src="assets/images/aboutUs/HelenBai.jpeg" alt="Helen Bai" class="team-photo">
+                    <h3 class="team-name">Helen Bai</h3>
+                    <p class="team-role">Secretary</p>
+                    <p class="team-school">Sophomore at duPont Manual High School</p>
+                </div>
+                <div class="team-card animate-on-scroll-scale">
+                    <img src="assets/images/aboutUs/DanRoss-Li.jpeg" alt="Dan Ross-Li" class="team-photo">
+                    <h3 class="team-name">Dan Ross-Li</h3>
+                    <p class="team-role">Partner</p>
+                    <p class="team-school">KYCombinator 40below40</p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-links">
+            <a href="index.html">2026 Coming Soon</a>
             <a href="about-us.html">About Us</a>
             <a href="2025-event.html">2025 Event</a>
             <a href="https://www.instagram.com/hack_the_track_ky/" target="_blank">Instagram</a>
             <a href="https://discord.gg/DRFaMBuFqB" target="_blank">Discord</a>
-            <a href="mailto:sutariamajay@gmail.com,annikachadha8@gmail.com?subject=Hack the Track 2026 Inquiry">Contact</a>
+            <a href="mailto:sutariamajay@gmail.com,annikachadha8@gmail.com?subject=Hack the Track Inquiry">Contact</a>
         </div>
         <p>Powered by KYX | © 2026 Hack the Track</p>
     </footer>
 
     <script>
-        // Countdown Timer
-        function updateCountdown() {
-            // Set target date to September 2026 (approximate)
-            const targetDate = new Date('September 1, 2026 00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance > 0) {
-                const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-                const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-                document.getElementById('months').textContent = months.toString().padStart(2, '0');
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            } else {
-                document.getElementById('months').textContent = '00';
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-            }
-        }
-
         // Enhanced Intersection Observer for reactive scroll animations
         const observerOptions = {
             threshold: [0, 0.1, 0.5, 1],
@@ -1359,11 +1052,8 @@
 
         // Initialize countdown and animations
         document.addEventListener('DOMContentLoaded', () => {
-            updateCountdown();
-            setInterval(updateCountdown, 60000); // Update every minute
-
             // Observe all elements with animation classes
-            const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale');
+            const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-scale');
             
             animatedElements.forEach(el => {
                 observer.observe(el);
@@ -1379,7 +1069,7 @@
         // Re-initialize animations on window resize
         window.addEventListener('resize', () => {
             setTimeout(() => {
-                const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale');
+                const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-scale');
                 animatedElements.forEach(el => {
                     observer.observe(el);
                 });

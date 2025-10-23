@@ -697,80 +697,6 @@
             margin-bottom: 15px;
         }
 
-        /* Event Recap Stats */
-        .stats-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px auto;
-            max-width: 1000px;
-            flex-wrap: nowrap;
-            align-items: center;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
-            color: #ffffff;
-            padding: 30px 20px;
-            border-radius: 24px;
-            text-align: center;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(15px);
-            flex: 1;
-            min-width: 150px;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
-            border-radius: 24px 24px 0 0;
-        }
-
-        .stat-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
-            border-color: #3b82f6;
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
-        }
-
-        .stat-card:hover::after {
-            opacity: 1;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #3b82f6;
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #94a3b8;
-        }
 
         /* Winners Section */
         .winners-grid {
@@ -899,7 +825,7 @@
         .winner-photo img {
             width: 100%;
             height: auto;
-            max-height: 250px;
+            max-height: 350px;
             object-fit: contain;
             object-position: center;
             transition: transform 0.3s ease;
@@ -908,6 +834,12 @@
 
         .winner-card:hover .winner-photo img {
             transform: scale(1.05);
+        }
+
+        /* Special Awards Grid */
+        .winners-grid.special-awards {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
 
@@ -1342,7 +1274,7 @@
             }
 
             .winner-photo img {
-                max-height: 200px;
+                max-height: 280px;
             }
             
             .logo {
@@ -1353,17 +1285,6 @@
                 font-size: 1.1rem;
             }
             
-            .stats-grid {
-                flex-wrap: wrap;
-                gap: 20px;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .stat-card {
-                flex: 1 1 calc(50% - 10px);
-                min-width: 120px;
-            }
             
             .gallery-grid {
                 grid-template-columns: 1fr;
@@ -1634,8 +1555,8 @@
             <a href="index.html" class="nav-logo">HACK THE TRACK</a>
             <div class="nav-links">
                 <a href="index.html">2026 Event - Coming Soon</a>
+                <a href="about-us.html">About Us</a>
                 <a href="2025-event.html">2025 Event</a>
-                <a href="winners.html">All Winners</a>
             </div>
         </nav>
 
@@ -1771,25 +1692,101 @@
             </div>
         </div>
 
-        <!-- Event Stats -->
-        <div class="section animate-on-scroll" id="stats">
-            <h2>Event Statistics</h2>
-            <div class="stats-grid">
-                <div class="stat-card animate-on-scroll-scale">
-                    <div class="stat-number">42</div>
-                    <div class="stat-label">Participants</div>
+        <!-- Winners Section -->
+        <div class="section animate-on-scroll" id="winners">
+            <h2>Winners</h2>
+            <p style="text-align: center; margin-bottom: 50px; color: #cbd5e1; font-size: 1.1rem;">
+                Congratulations to our amazing winners and all participants!
+            </p>
+            
+            <!-- Top 3 Winners -->
+            <h3 style="text-align: center; color: #3b82f6; font-size: 2rem; font-weight: 700; margin-bottom: 40px; text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);">Top 3 Winners</h3>
+            <div class="winners-grid">
+                <div class="winner-card animate-on-scroll-scale first-place">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/Vyte.jpeg" alt="Vyte - 1st Place">
+                    </div>
+                    <div class="winner-place first-place">1st Place</div>
+                    <div class="winner-team">Vyte</div>
+                    <div class="winner-prize">$500</div>
+                    <div class="winner-description">Data aggregation platform for policy makers to make informed community decisions</div>
                 </div>
-                <div class="stat-card animate-on-scroll-scale">
-                    <div class="stat-number">9</div>
-                    <div class="stat-label">Teams</div>
+                <div class="winner-card animate-on-scroll-scale second-place">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/SmartRoute.jpeg" alt="SafeRoute - 2nd Place">
+                    </div>
+                    <div class="winner-place second-place">2nd Place</div>
+                    <div class="winner-team">SafeRoute</div>
+                    <div class="winner-prize">$300</div>
+                    <div class="winner-description">AI-powered navigation system for safer travel routes</div>
                 </div>
-                <div class="stat-card animate-on-scroll-scale">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Top Prizes</div>
+                <div class="winner-card animate-on-scroll-scale third-place">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/EyeQ.jpeg" alt="EyeQ - 3rd Place">
+                    </div>
+                    <div class="winner-place third-place">3rd Place</div>
+                    <div class="winner-team">EyeQ</div>
+                    <div class="winner-prize">$200</div>
+                    <div class="winner-description">Computer vision solution for accessibility and safety</div>
                 </div>
-                <div class="stat-card animate-on-scroll-scale">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Special Awards</div>
+            </div>
+
+            <!-- Special Awards -->
+            <h3 style="text-align: center; color: #8b5cf6; font-size: 2rem; font-weight: 700; margin: 80px 0 40px 0; text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);">Special Awards</h3>
+            <div class="winners-grid special-awards">
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/KitchenVine.jpeg" alt="Kitchen Vine - Social Impact Award">
+                    </div>
+                    <div class="winner-place">Social Impact Award</div>
+                    <div class="winner-team">Kitchen Vine</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Innovative solution addressing food waste and community nutrition challenges</div>
+                </div>
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/Tamaguchi.jpeg" alt="Tamaguchi - Retro Refresh Award">
+                    </div>
+                    <div class="winner-place">Retro Refresh Award</div>
+                    <div class="winner-team">Tamaguchi</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Creative reimagining of classic concepts with modern technology</div>
+                </div>
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/Dormie.jpeg" alt="Dormie - Practical Problem Solver Award">
+                    </div>
+                    <div class="winner-place">Practical Problem Solver Award</div>
+                    <div class="winner-team">Dormie</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Practical solution addressing real-world challenges faced by students</div>
+                </div>
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/RadarRide.jpeg" alt="Radar Ride - Stellar Setup Award">
+                    </div>
+                    <div class="winner-place">Stellar Setup Award</div>
+                    <div class="winner-team">Radar Ride</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Exceptional technical implementation and innovative approach</div>
+                </div>
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/SmartPrep.jpeg" alt="Smart Prep - Level Up Award">
+                    </div>
+                    <div class="winner-place">Level Up Award</div>
+                    <div class="winner-team">Smart Prep</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Educational technology solution enhancing learning experiences</div>
+                </div>
+                <div class="winner-card animate-on-scroll-scale">
+                    <div class="winner-photo">
+                        <img src="assets/images/winners/ProjectSeed.jpeg" alt="Project Seed - Global Impact Award">
+                    </div>
+                    <div class="winner-place">Global Impact Award</div>
+                    <div class="winner-team">Project Seed</div>
+                    <div class="winner-prize">Special Recognition</div>
+                    <div class="winner-description">Solution with potential for worldwide positive impact</div>
                 </div>
             </div>
         </div>
@@ -1873,6 +1870,8 @@
     <footer id="contact">
         <div class="footer-links">
             <a href="index.html">2026 Coming Soon</a>
+            <a href="about-us.html">About Us</a>
+            <a href="2025-event.html">2025 Event</a>
             <a href="https://www.instagram.com/hack_the_track_ky/" target="_blank">Instagram</a>
             <a href="https://discord.gg/DRFaMBuFqB" target="_blank">Discord</a>
             <a href="mailto:sutariamajay@gmail.com,annikachadha8@gmail.com?subject=Hack the Track Inquiry">Contact</a>
